@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&amp;D Character Creation Guide</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+          position: relative;
+        }
+        .vmid{
+            vertical-align: middle !important;
+
+        }
+        .tabbed{
+            position: relative;
+            margin-left:25px;
+        }
+        .centered{
+            margin:0 auto;
+        }
+        .fixed {
+            position: fixed;
+        }
+        /* sidebar */
+        .bs-docs-sidebar {
+            padding-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* all links */
+        .bs-docs-sidebar .nav>li>a {
+            color: #444;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* nested links */
+        .bs-docs-sidebar .nav .nav>li>a {
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+        /* active & hover links */
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #000;
+            text-decoration: none;
+            background-color: transparent;
+            border-left-color: #000;
+        }
+        /* all active links */
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>.active:hover>a,
+        .bs-docs-sidebar .nav>.active:focus>a {
+            font-weight: 700;
+        }
+        /* nested active links */
+        .bs-docs-sidebar .nav .nav>.active>a,
+        .bs-docs-sidebar .nav .nav>.active:hover>a,
+        .bs-docs-sidebar .nav .nav>.active:focus>a {
+            font-weight: 500;
+        }
+
+        /* hide inactive nested list */
+        .bs-docs-sidebar .nav ul.nav {
+            display: none;
+        }
+        /* show active nested list */
+        .bs-docs-sidebar .nav>.active>ul.nav {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-offset="80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <h1>Dungeons and Dragons Character Creation Guide</h1>
+                <div id="introduction">
+                    <h2>Welcome <small>Your adventure awaits</small></h2>
+                    <p>
+                        Hear ye, Hear ye the time of reckoning is near. Whether you are a complete beginner or a seasoned dungeoneerer, creating a character has always been a time consuming process. This guide is designed to make character creation quick and imaginative. Whether the goblins are out of hand or a moon is on a collision course, this guide will get you ready to tackle your next adventure.
+                    </p>
+                </div>
+                <div id="usage">
+                    <h2>Using this Guide <small>Oh god! What is this thing?!</small></h2>
+                    <p>
+                        Before we dive into the steps of character creation, there are some things you should know about this guide. To ease directions, I will be using some simple notation and keys to help you understand and navigate these instructions better.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Terminology / Notation</div>
+                                <table class="table table-condensed table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td><b>DM</b></td>
+                                            <td>Dungeon Master, the person running the game.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Player</b></td>
+                                            <td>This is you.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Character</b></td>
+                                            <td>This is who you are in the game.</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td><b><em>x</em>d<em>y</em></b></td>
+                                            <td><b>Dice notation</b>, x stands for how many dice, y stands for the amount of faces on it. &lt;5&gt;</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td><b>&lt;<em>pp</em>&gt;</b></td>
+                                            <td><b>Page numbers</b> you can find additional information in the 3.5 Players Handbook</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <b>STR</b>,
+                                                <b>DEX</b>,
+                                                <b>CON</b>,
+                                                <b>INT</b>,
+                                                <b>WIS</b>,
+                                                <b>CHA</b>
+                                            </td>
+                                            <td>These refer to their respectful <a href="#stats_modifiers">Ability Modifier</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Required Materials</div>
+                                <table class="table table-condensed table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Pencil &amp; Eraser</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="pdf/revised_character_sheet_v35.pdf">D&amp;D character sheet</a> &dagger;</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Scratch Paper</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Standard D&amp;D dice<br />(<b>4d6</b>, <b>d20</b>, <b>d4</b>, <b>d8</b>, <b>d10</b>, <b>d12</b>)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>D&amp;D 3.5 player handbook</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Bookmarks / Post-it Notes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Information Keys</div>
+                                <table class="table table-condensed table-striped">
+                                    <tbody>
+                                        <tr class="info">
+                                            <td class="vmid"><i class="glyphicon glyphicon-info-sign" style="font-size: 20px;"></i></td>
+                                            <td>These will contain additional information about the subject. If you are a new player I recommend reading these.</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td class="vmid"><i class="glyphicon glyphicon-question-sign" style="font-size: 20px;"></i></td>
+                                            <td>These are warnings to check with your DM. A lot of DM's implement their own systems. This is something you may want to ask about.</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td class="vmid"><i class="glyphicon glyphicon-alert" style="font-size: 20px;"></i></td>
+                                            <td>These are important. When using as a reference make sure to read these.</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td class="vmid"><i class="glyphicon glyphicon-ok" style="font-size: 20px;"></i></td>
+                                            <td>These are personal recommendations.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                &dagger; For this guide I will be referencing the included <a href="pdf/revised_character_sheet_v35.pdf">Revised Character Sheet</a>.<br />
+                            </p>
+                            <p>
+                                I have also included the <a href="pdf/original_character_sheet_v35.pdf">Original Character Sheet</a> should your DM prefer.
+                            </p>
+                            <p>
+                                Both can be acquired from Wizards of the Coast website:<br />
+                                <a href="http://archive.wizards.com/default.asp?x=dnd/dnd/charactersheets">http://archive.wizards.com/default.asp?x=dnd/dnd/charactersheets</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <i class="glyphicon glyphicon-alert"></i>
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </div>
+                        <div class="panel-body">
+                            This guide is for <b><u>D&amp;D 3.5e</u></b>. Be sure to check with your DM that this is the version you are using.
+                        </div>
+                    </div>
+                </div>
+                <div id="playstyle">
+                    <h2>Play Style <small>Let's start here</small></h2>
+                    <p>
+                        Do you know what you want to play as? Describe your character in a few words; write it down on some scratch paper if you like.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Examples</div>
+                                <table class="table table-condensed table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Happy Healer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Headstrong Lancer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mysterious Magician</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pickpocket Rouge</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    To create a fun character, it is key to understand your own play style.  You should be able to summarize your character's play style in a few words. If you need inspiration, try using one of your favorite fantasy characters as a model. Just be sure to check with the DM.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading"><i class="glyphicon glyphicon-question-sign"></i></div>
+                                <div class="panel-body">
+                                    Each DM has their own style of game play. Ask your DM what kind of world you will be adventuring  in or what other party members have decided to play as.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="base">
+                    <h2>Ability Scores <small>Let's roll some dice!</small></h2>
+                    <p>
+                        <ul>
+                            <li>
+                                Roll <b>4d6</b>
+                            </li>
+                            <li>
+                                <b>Remove</b> the lowest <b>1</b>
+                            </li>
+                            <li>
+                                <b>Total</b> the remaining <b>3</b>
+                            </li>
+                            <li>
+                                Write down this value on some scrap paper
+                            </li>
+                            <li>
+                                You will want to do this <b>6 times</b>
+                            </li>
+                        </ul>
+                        Don't worry about putting these on your character sheet just yet, we will get to that later.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Your character has 6 base stats &lt;7&gt;:
+                                </div>
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                        <tr>
+                                            <td>Stat</td>
+                                            <td>Abbr</td>
+                                            <td>Use</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Strength</td>
+                                            <td>(<b>STR</b>)</td>
+                                            <td>Swinging a sword, lifting something Heavy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dexterity</td>
+                                            <td>(<b>DEX</b>)</td>
+                                            <td>Picking a lock, shooting an arrow</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Constitution</td>
+                                            <td>(<b>CON</b>)</td>
+                                            <td>Tenacity, resistance to poisoning</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Intelligence</td>
+                                            <td>(<b>INT</b>)</td>
+                                            <td>Reading, how many things you know</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wisdom</td>
+                                            <td>(<b>WIS</b>)</td>
+                                            <td>Tracking, sensing someones motive</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Charisma</td>
+                                            <td>(<b>CHA</b>)</td>
+                                            <td>Diplomacy, how well you are with people</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-6">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Some DM's handle rolling stat scores differently. Check if they are using alternative methods.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="class">
+                    <h2>Class <small>It's not biology</small></h2>
+                    <p>
+                        <b>Choose your class</b> from the players hand book <b>&lt;21&gt;</b> or another resource. It is best to choose this first to help bring a frame of mind to the rest of your character. If you are new, it is best to choose a base class.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Base Classes
+                                </div>
+                                <table class="table table-condensed table-striped" style="text-align: center;">
+                                    <thead>
+                                        <tr>
+                                            <td>Class Name</td>
+                                            <td>Abbr</td>
+                                            <td>Page Number</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Barbarian</td>
+                                            <td>(<b>Bbn</b>)</td>
+                                            <td>&lt;24&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bard</td>
+                                            <td>(<b>Brd</b>)</td>
+                                            <td>&lt;26&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cleric</td>
+                                            <td>(<b>Clr</b>)</td>
+                                            <td>&lt;30&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Druid</td>
+                                            <td>(<b>Drd</b>)</td>
+                                            <td>&lt;33&gt;</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Fighter</td>
+                                            <td>(<b>Ftr</b>)</td>
+                                            <td>&lt;37&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monk</td>
+                                            <td>(<b>Mnk</b>)</td>
+                                            <td>&lt;39&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paladin</td>
+                                            <td>(<b>Pal</b>)</td>
+                                            <td>&lt;42&gt;</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Ranger</td>
+                                            <td>(<b>Rgr</b>)</td>
+                                            <td>&lt;46&gt;</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Rouge</td>
+                                            <td>(<b>Rog</b>)</td>
+                                            <td>&lt;49&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sorcerer</td>
+                                            <td>(<b>Sor</b>)</td>
+                                            <td>&lt;51&gt;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wizard</td>
+                                            <td>(<b>Wiz</b>)</td>
+                                            <td>&lt;55&gt;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-7">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Bookmark your class's pages, you will be referencing them a lot.
+                                </div>
+                            </div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Make sure you know your classes preferred stats.
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Your character's class is their role in the party. This dictates a lot about your character's personality, back story, and skill set.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="race">
+                    <h2>Race <small>Only a little prejudice</small></h2>
+                    <p>
+                        <b>Choose your race</b> from the player handbook <b>&lt;11&gt;</b> or another resource. The table below is a summary of the basic classes provided in the Player Handbook.
+                    </p>
+                    <p>
+                        Make sure to note any <b>restrictions</b> your race may have with <b>classes</b>, <b>religion</b>, and <b>alignment</b>.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Races</div>
+                                <table class="table table-condensed table-striped">
+                                    <thead>
+                                        <tr>
+                                            <td>Race</td>
+                                            <td>Ability Bonuses</td>
+                                            <td>Preferred Class</td>
+                                            <td>Page Number</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="success">
+                                            <td>Human</td>
+                                            <td>None</td>
+                                            <td>Any</td>
+                                            <td><b>&lt;12&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dwarf</td>
+                                            <td>+2 Con<br />-2 Char</td>
+                                            <td>Fighter</td>
+                                            <td><b>&lt;14&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Elf</td>
+                                            <td>+2 Dex<br />-2 Con</td>
+                                            <td>Wizard</td>
+                                            <td><b>&lt;15&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gnome</td>
+                                            <td>+2 Con<br />-2 Str</td>
+                                            <td>Bard</td>
+                                            <td><b>&lt;16&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Half-elf</td>
+                                            <td>None</td>
+                                            <td>Any</td>
+                                            <td><b>&lt;18&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Half-orc</td>
+                                            <td>+2 Str<br />-2 Int<b>&dagger;</b><br />-2 Cha</td>
+                                            <td>Barbarian</td>
+                                            <td><b>&lt;18&gt;</b></td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Halfling</td>
+                                            <td>+2 Dex<br />-2 Str</td>
+                                            <td>Rouge</td>
+                                            <td><b>&lt;19&gt;</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="0">
+                                                <b>&dagger;</b> Cannot fall below 3 because of this. &lt;12&gt;
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Bookmark your race's pages, you may need to reference them a lot.
+                                </div>
+                            </div>
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Check with your DM regarding any race restrictions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Your race is a large part of your role playing however it also influences your stats and abilities. Each race may lend different abilities, religions, and languages.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="apperance">
+                    <h2>Appearance and Traits <small>Damn! I look good</small></h2>
+                    <p>
+                        Hopefully by now you have a clear idea of your character's play style, and maybe have some back story ideas.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>
+                                <img id="apperance_fields" class="img-thumbnail img-responsive" src="img/apperance.png" width="100%" height="auto" alt="apperances and traits field image"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>
+                                Fill out the fields at the top of your character sheet:
+                                <ul>
+                                    <li><b>Character Name</b></li>
+                                    <li>Player Name</li>
+                                    <li><b>Class and your Level</b> (This is  '1')</li>
+                                    <li><b>Race</b></li>
+                                    <li><b>Size</b></li>
+                                    <li>Gender</li>
+                                    <li><b>Alignment</b></li>
+                                    <li><b>Religion/Patron Deity</b></li>
+                                    <li>Height</li>
+                                    <li>Weight</li>
+                                    <li>Looks</li>
+                                    <li><b>Additional information</b> for any of these can be found on page <b>&lt;103&gt;</b></li>
+                                </ul>
+                            </p>
+                            <div class="panel panel-success">
+                                <div class="panel-heading"><i class="glyphicon glyphicon-ok"></i></div>
+                                <div class="panel-body">
+                                    You will <b>need everything in bold</b> for other stats and game play.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <b>Size</b> is how big your character is in relation to everything else. Being bigger gives you better armor and damage, but being smaller makes you more dexterous. <b>&lt;134&gt;</b>
+                                    </p>
+                                    <p>
+                                        <b>Alignment</b> is how good or evil you are, in combination to the likelihood you will break the law. <b>&lt;104&gt;</b>
+                                    </p>
+                                    <p>
+                                        <b>Religion</b> is mostly used for clerics, but it can impact your roleplay if you adhere to your characters beliefs. <b>&lt;106&gt;</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </div>
+                        <div class="panel-body">
+                            DM's usually place <b>restrictions</b> over your <b>alignment</b>. Make sure you have permission if playing any of the extremes.
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </div>
+                        <div class="panel-body">
+                            Character names are based off of their race. Have fun here with your lore.
+                        </div>
+                    </div>
+                </div>
+                <div id="stats">
+                    <h2>Stats <small>Oh no... Maths</small></h2>
+                    <p>
+                        Your stats are what brings mechanics into the game. While there are a lot of them, most of it is repeated information (<a href="#stats_modifiers">Modifiers</a>) and you shouldn't have to do anything beyond basic arithmetic.
+                    </p>
+                    <p>
+                        This next part will be broken into steps as there is a lot to cover.
+                    </p>
+                    <p>
+                        <img id="stats_all_fields" class="thumbnail img-responsive centered" src="img/stats.png" alt="all stat fields"/>
+                    </p>
+                    <div class="tabbed">
+                        <div id="stats_base">
+                            <h3>1. Place and Sort your Base Stats</h3>
+                            <p>
+                                Take the numbers you wrote down earlier, then <b>sort</b> them into your <b>classes preferred stats</b>. Then <b>add</b> any <b>racial</b> stat modifications you may have.
+                            </p>
+                            <p>
+                                Place this total in the <b>"Base Score + Racial Mod."</b> field.
+                            </p>
+                        </div>
+                        <div id="stats_modifiers">
+                            <h3>2. Write down Ability Modifiers</h3>
+                            <p>
+                                Next we will write down your <b>Ability Modifiers</b> from the following table in the <b>Modifier Fields</b> to the right of your <a href="#base">Base Stats</a>.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Ability Modifiers</div>
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <td>Your stat</td>
+                                                    <td>Modifier</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>-5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2 - 3</td>
+                                                    <td>-4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4 - 5</td>
+                                                    <td>-3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6 - 7</td>
+                                                    <td>-2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8 - 9</td>
+                                                    <td>-1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10 - 11</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12 - 13</td>
+                                                    <td>+1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14 - 15</td>
+                                                    <td>+2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>16 - 17</td>
+                                                    <td>+3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>18 - 19</td>
+                                                    <td>+4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20 - 21</td>
+                                                    <td>+5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-6">
+                                    <p>
+                                        <img id="stats_modifier_fields" class="thumbnail img-responsive centered" src="img/modifier_fields.png" alt="modifier fields"/>
+                                    </p>
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            Your ability modifier is your working number for each ability. It is what you will add to your rolls and your other stats. &lt;7&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="stats_base_attack">
+                            <h3>3. Base Attack Bonus</h3>
+                            <p>
+                                Under your combat options, <b>write down your Base Attack Bonus</b>, this is dependent on your class and level.
+                            </p>
+                            <p>
+                                Each class has a <b>standing</b> which is either <b>good</b>, <b>poor</b>, or <b>average</b>. Depending on your standing, as you level your bonus will vary according to this table found on page &lt;22&gt;.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Base Attack Bonus for Base Classes Level 1
+                                        </div>
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <td>Class</td>
+                                                    <td>Standing</td>
+                                                    <td>Bonus</td>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Barbarian</td>
+                                                    <td>Good</td>
+                                                    <td>+1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bard</td>
+                                                    <td>Average</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cleric</td>
+                                                    <td>Average</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Druid</td>
+                                                    <td>Average</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Fighter</td>
+                                                    <td>Good</td>
+                                                    <td>+1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Monk</td>
+                                                    <td>Average</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paladin</td>
+                                                    <td>Good</td>
+                                                    <td>+1</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Ranger</td>
+                                                    <td>Good</td>
+                                                    <td>+1</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Rouge</td>
+                                                    <td>Average</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sorcerer</td>
+                                                    <td>Poor</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wizard</td>
+                                                    <td>Poor</td>
+                                                    <td>&nbsp;0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-6">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            Your Base Attack Bonus is a bonus to rolling attacks. When rolling, you add your Base Stat modifier, Size modifiers, Racial modifiers, miscellaneous modifiers, then finally your Base Attack Bonus. This will depend on your class and level. &lt;22&gt;
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            There is a condensed table for this alongside your <a href="#stats_saves">Saving Throws</a> within your <a href="#class">class pages</a> in the <b>Players Handbook</b>. I recommend you <b>bookmark it</b>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="stats_hp">
+                            <h3>4. Health Points</h3>
+                            <p>
+                                <b>Health points</b> (HP) represents your health. Each class has its own hit die. Each time you level, you will gain a roll of this hit die plus your constitution modifier.
+                            </p>
+                            <p>
+                                For <b>level 1</b>, you will just take the <b>maximum your hit die can roll</b>, then <b>add</b> your <b>CON</b> for your starting health.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Hit Die for each basic class &lt;23&gt;:
+                                        </div>
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <td>Die</td>
+                                                    <td>Class(s)</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>d4</td>
+                                                    <td>Sorcerer, Wizard</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>d6</td>
+                                                    <td>Bard, Rouge</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>d8</td>
+                                                    <td>Cleric, Druid, Monk, Ranger</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>d10</td>
+                                                    <td>Fighter, Paladin</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>d12</td>
+                                                    <td>Barbarian</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="0">
+                                                        <b>Note:</b><br />Should you roll a total of 0 or less after constitution modifier, you will gain 1 Hp regardless.
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-6">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                It goes without saying, when your HP hits 0 your character is in the process of dying&dagger;. More info on HP &lt;23&gt; and &lt;136&gt;.
+                                            </p>
+                                            <p>
+                                                &dagger; <em>Should this happen see necromancy</em> &lt;171&gt;
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                I recommend that you <b>draw a box over your max Hp</b>.
+                                            </p>
+                                            <p>
+                                                Keep a current count below this. When in battle, minus from the current count, when you get healed, either add to the current count or erase it entirely. When you level, just update your max Hp Box.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="stats_saves">
+                            <h3>5. Saving Throws</h3>
+                            <p>
+                                <b>Saving throws</b> &lt;23&gt; work similar to <a href="#stats_base_attack">Base Attack Bonus</a> in regards to that you have a standing for your class, <b>Good</b> and <b>Poor</b> (No average). As you level, your saves also increase. See the table below for the base classes starting saves:
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Saving for Base Classes Level 1
+                                        </div>
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <td>Class</td>
+                                                    <td>Fortitude</td>
+                                                    <td>Reflex</td>
+                                                    <td>Will</td>
+                                                    <td>Page Number</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Barbarian</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&lt;25&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bard</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;27&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cleric</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;31&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Druid</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;35&gt;</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Fighter</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&lt;39&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Monk</td>
+                                                    <td>+2</td>
+                                                    <td>+2</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;40&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Paladin</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&lt;43&gt;</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Ranger</td>
+                                                    <td>+2</td>
+                                                    <td>+2</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&lt;46&gt;</td>
+                                                </tr>
+                                                <tr class="success">
+                                                    <td>Rouge</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>0</td>
+                                                    <td>&lt;49&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sorcerer</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;52&gt;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wizard</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>&nbsp;0</td>
+                                                    <td>+2</td>
+                                                    <td>&lt;55&gt;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <img id="saving_throws_field" class="thumbnail img-responsive" src="img/saving_throws_field.png" width="100%" height="auto" alt="Saving Throws Field"/>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            There is a condensed table for this alongside your <a href="#stats_base_attack">Base Attack Bonus</a> within your <a href="#class">class pages</a> in the <b>Players Handbook</b>.<br />I recommend you <b>bookmark it</b>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="stats_misc">
+                            <h3>6. Miscellaneous Stats</h3>
+                            <p>
+                                We are almost through! Lets wrap up the last 3 misc. stats before moving on:
+                            </p>
+                            <ul>
+                                <li>Speed &lt;162&gt;.</li>
+                                <li>Initiative Modifier &lt;138&gt;</li>
+                                <li>Grapple &lt;155&gt;</li>
+                            </ul>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                            Speed
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                Your <b>speed</b> tells you how far you can move in a round and still do something.
+                                            </p>
+                                            <p>
+                                                Your speed is <b>determined by your <a href="#race">race</a> and <a href="#ac_armor">armor</a></b>. For more information, see your racial pages and movement description &lt;162&gt;
+                                            </p>
+                                            <p>
+                                                Below is a table of the base race's speed:
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                            Initiative Modifier
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                Your <b>Initiative Modifier</b> gives you a bonus when determining the order to take turns when entering combat. &lt;138&gt;
+                                            </p>
+                                            <p>
+                                                <b>Initiative Modifier</b> is just your <a href="#base"><b>DEX</b></a> and any miscellaneous bonuses such as feats.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                            Grapple
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                <b>Grapple</b> means to wrestle and struggle hand-to-hand with an opponent. &lt;155&gt;
+                                            </p>
+                                            <p>
+                                                Your <b>Grapple Modifier</b> is equal to the <b>total</b> of your <a href="#stats_base_attack"><b>Base Attack Bonus</b></a>, <a href="#base"><b>STR</b></a>, <a href="#apperance"><b>Size modifier</b></a> and miscellaneous bonuses
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            Speeds for Basic Races
+                                        </div>
+                                        <table class="table table-condensed table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <td>Speed</td>
+                                                    <td>M / H Armor</td>
+                                                    <td>Classes</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>20 feet</td>
+                                                    <td>15 feet</td>
+                                                    <td>Gnomes, Halfings</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20 feet</td>
+                                                    <td>20 feet</td>
+                                                    <td>Dwarfs</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>30 feet</td>
+                                                    <td>20 feet</td>
+                                                    <td>Humans, Elves, Half-Elves, Half-Orcs</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ac">
+                    <h2>Armor and Weapons <small>I swing my sword... again</small></h2>
+                    <p>
+                        Next we will be equipping your character &lt;111&gt;.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    It is important to note that every DM does this differently. Check with yours to see what you can choose for armor and weapons.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabbed">
+                        <div id="ac_weapons">
+                            <h3>Weapons</h3>
+                            <p>
+                                All basic weapons are listed on a table on pages &lt;116-117&gt;.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p>
+                                        When picking a weapon, make sure to check with what your <a href="#class">class</a> prefers. Then write down the following for each weapon you are allowed to carry:
+                                    </p>
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Attack bonus </li>
+                                        <ul>
+                                            <li>Ranged uses <b>DEX</b></li>
+                                            <li>Melee uses <b>STR</b></li>
+                                        </ul>
+                                        <li>Damage</li>
+                                        <ul>
+                                            <li>Write down the respectful die for your size</li>
+                                        </ul>
+                                        <li>Critical modifier</li>
+                                        <li>Range</li>
+                                        <li>Type</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-6">
+                                    <p>
+                                        <img id="ac_weapons_field" class="thumbnail img-responsive" src="img/weapons_field.png" width="100%" height="auto" alt="weapons field"/>
+                                    </p>
+                                    <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-alert"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            You might not have access to Martial or Exotic Weapons
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ac_armor">
+                            <h3>Armor</h3>
+                            <p>
+                                Armor is what keeps your character safe and is essential to avoid getting mauled on your first encounter. We will pick armor, then fill in the fields to find your total <b>Armor Class (AC)</b>.
+                            </p>
+                            <p>
+                                <b>All basic armor is listed in a table on page &lt;116-117&gt;</b>
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p>
+                                        <b>Choose your armor</b>, then <b>write it down</b> on the bottom of your character sheet. Make sure to include the following:
+                                    </p>
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Max Dex</li>
+                                        <li>Check Penalty</li>
+                                        <li>Weight</li>
+                                        <li>If you have a shield, add it too</li>
+                                    </ul>
+                                    <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                            <i class="glyphicon glyphicon-alert"></i>
+                                        </div>
+                                        <div class="panel-body">
+                                            Careful as <b>Medium and Heavy armor</b> will <b>reduce</b> your <a href="#stats_misc"><b>Speed</b></a>. Make sure to update this is you are planning on wearing this kind of armor.
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading"><i class="glyphicon glyphicon-ok"></i></div>
+                                        <div class="panel-body">
+                                            The <a href="pdf/revised_character_sheet_v35.pdf">Revised Character sheet</a> has fields for all of these things.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>
+                                        <b>Next</b>, we will <b>calculate</b> your <b>AC</b>.
+                                    </p>
+                                    <p>
+                                        <b>Total</b> your <b>armor bonus</b>, <b>shield bonus</b>, <b>DEX</b> (but <b>not exceeding</b> your armors max <b>DEX</b>), <b>size modifier</b>, any <b>natural armor</b> your race or class may have, deflection modifier, then anything miscellaneous outstanding.<br />
+                                        <b>Then, add 10</b> to your total
+                                    </p>
+                                    <hr />
+                                    <p>
+                                        <b>Finally</b>, we will calculate your <b>Touch AC</b>, and <b>Flat-Foooted AC</b>
+                                    </p>
+                                    <p>
+                                        <b>Touch AC</b> is your current AC <b>minus</b> your <b>Armor Bonus</b>
+                                    </p>
+                                    <p>
+                                        <b>Flat-Footed AC</b> is your current AC <b>minus</b> your <b>DEX modifier</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skills">
+                    <h2>Skills <small>I didn't know that I didn't know that</small></h2>
+                    <p>
+                        Next we will place our skills. This is the most customizable part of creating a character I feel.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <p>
+                                <b>First</b>, we will need to know your total number of skill points. This is calculated from your intelligence.
+                            </p>
+                            <p>
+                                The following table has all of the skill point formulas for each class:
+                            </p>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Calculate Skill Points
+                                </div>
+                                <table class="table table-condensed table-striped" style="text-align: center;">
+                                    <tbody>
+                                        <tr>
+                                            <td>(4 + <b>INT</b>) x 4</td>
+                                            <td>Barbarian</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(4 + <b>INT</b>) x 4</td>
+                                            <td>Bard</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(2 + <b>INT</b>) x 4</td>
+                                            <td>Cleric</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(4 + <b>INT</b>) x 4</td>
+                                            <td>Druid</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>(2 + <b>INT</b>) x 4</td>
+                                            <td>Fighter</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(4 + <b>INT</b>) x 4</td>
+                                            <td>Monk</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(2 + <b>INT</b>) x 4</td>
+                                            <td>Paladin</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>(4 + <b>INT</b>) x 4</td>
+                                            <td>Ranger</td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>(8 + <b>INT</b>) x 4</td>
+                                            <td>Rouge</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(2 + <b>INT</b>) x 4</td>
+                                            <td>Sorcerer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>(2 + <b>INT</b>) x 4</td>
+                                            <td>Wizard</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                <div class="panel-body">
+                                    <b>As you level</b>, you will gain <b>additional points</b>, and your <b>maximum rank will inrease</b>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-lg-6">
+                            <p>
+                                <b>Next</b>, <b>check</b> and see what skills your class has <b>available</b> to them at level one.
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p>
+                                        <b>Color in</b> the boxes to the <b>left</b> of the <b>skills</b> that your class provides.
+                                    </p>
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading"><i class="glyphicon glyphicon-info-sign"></i></div>
+                                        <div class="panel-body">
+                                            Any ability that already has a <b>black diamond</b> next to it means that you can rank this up despite your class not supporting it.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img id="skills_color" class="thumbnail img-responsive" src="img/skills_color.png" width="100%" height="autp" alt="Skills picture"/>
+                                </div>
+                            </div>
+                            <p>
+                                At level 1 you can spend a <b>maximum of 4 skill points</b> (ranks) per skill. Your total number of ranks must <b>not exceed</b> the <b>total</b> number of <b>skill points</b> you calculated earlier.
+                            </p>
+                            <p>
+                                <b>Finally</b>, add the required <b><a href="#stats_modifiers">ability modifier</a> for each skill</b>, and any <b>miscellaneous modifiers</b> you might have (usually feats). <b>Total</b> all of these to get your <b>skill modifier</b> for that particular skill.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="feats">
+                    <h2>Feats <small>Yes, I am legendary</small></h2>
+                    <p>
+                        At last, <b>Feats</b>. The <b>number of starting feats</b> you get at level 1 <b>depends</b> on your <a href="#class"><b>Class</b></a> and <a href="#race"><b>Race</b></a>. Check those pages to see how many you are allowed to have.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <p>
+                                In the book, on pages <b>&lt;90-91&gt;</b> is a table of all of the available basic feats.
+                            </p>
+                            <p>
+                                <b>Write down</b> what you have chosen in the feats section, and <b>update</b> any <b>stats</b> they might have adjusted.
+                            </p>
+                        </div>
+                        <div class="col-lg-offset-2 col-lg-6">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-info-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        Feats are abilities that are unique to your character, think of them as unlockable talents. Some feats require a certain amount of stats or other feats as <b>prerequisites</b>.
+                                    </p>
+                                    <p>
+                                        For example, if you are particularly good at shooting a bow, you can do more damage from point blank. This is a feat.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="end">
+                    <h2>Final Thoughts <small>Good luck and God Speed!</small></h2>
+                    <p>
+                        Now you are finally ready to take to the open roads. Your adventure awaits. Good luck adventurer and may your path be true.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-warning">
+                                <div class="panel-heading">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </div>
+                                <div class="panel-body">
+                                    Now that you have completed the guide, have your DM review your character sheet to see if there is anything else they would like you to add.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="col-xs-3 bs-docs-sidebar hidden-print">
+                <ul id="sidebar" class="nav nav-stacked fixed">
+                    <li>
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#usage">Using this Guide</a>
+                    </li>
+                    <li>
+                        <a href="#playstyle">Play Style</a>
+                    </li>
+                    <li>
+                        <a href="#base">Ability Scores</a>
+                    </li>
+                    <li>
+                        <a href="#class">Class</a>
+                    </li>
+                    <li>
+                        <a href="#race">Race</a>
+                    </li>
+                    <li>
+                        <a href="#apperance">Appearance and Traits</a>
+                    </li>
+                    <li>
+                        <a href="#stats">Stats</a>
+                        <ul class="nav nav-stacked">
+                            <li><a href="#stats_base">Base Stats</a></li>
+                            <li><a href="#stats_modifiers">Ability Modifiers</a></li>
+                            <li><a href="#stats_base_attack">Base Attack Bonus</a></li>
+                            <li><a href="#stats_hp">Health Points</a></li>
+                            <li><a href="#stats_saves">Saving Throws</a></li>
+                            <li><a href="#stats_misc">Miscellaneous</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#ac">Armor and Weapons</a>
+                        <ul class="nav nav-stacked">
+                            <li><a href="#ac_weapons">Weapons</a></li>
+                            <li><a href="#ac_armor">Armor</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#feats">Feats</a>
+                    </li>
+                    <li>
+                        <a href="#end">Final Thoughts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
